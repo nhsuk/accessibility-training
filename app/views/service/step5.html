@@ -1,0 +1,106 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Check your answers - Register for our new service
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/service/start-page",
+  text: "Service home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <h1>
+      Check your answers
+    </h1>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['first-name'] }} {{ data['last-name'] }}
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="/service/step1">
+            Change<span class="nhsuk-u-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="/service/step2">
+            Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Do you know your NHS number?
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['nhs-number'] }}
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="/service/step3">
+            Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Conditions
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          <ul class="nhsuk-list nhsuk-u-margin-bottom-1">
+            {% if data['condition'] == " " %}
+              <li>No conditions selected</li>
+            {% endif %}
+            {% for item in data['condition'] %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="/service/step4">
+            Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h3 class="nhsuk-heading-m">Now send your details</h3>
+    <p class="text-justified">By sending this information you are confirming that, as far as you know, the details you are providing are correct.</p>
+
+    {{ details({
+      "classes": "nhsuk-u-margin-bottom-6",
+      "text": "What happens with my data?",
+      "HTML": "
+        <p>Nothing - this service does not actually collect anything. This service is for testing purposes only.</p>
+      "
+    }) }}
+
+    <form action="/service/confirmation" method="post">
+      <button class="nhsuk-button" type="submit">Accept and send</button>
+    </form>
+
+  </div>
+</div>
+{% endblock %}

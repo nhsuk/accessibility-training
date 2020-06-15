@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Do you know your NHS number? - Register for our new service
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/service/start-page",
+  text: "Service home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/service/step4" method="post">
+        <fieldset class="nhsuk-fieldset" aria-describedby="nhsnumber-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            Do you know your NHS number?
+          </legend>
+          <span class="nhsuk-hint nhsuk-u-margin-bottom-2" id="nhsnumber-hint">
+            Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span class="nhsuk-u-nowrap">485 777 3456</span>.
+          </span>
+          <div class="nhsuk-form-group">
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="nhs-number-1" name="nhs-number" type="radio" value="Yes"{{ checked("nhs-number", "Yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-1">
+                  Yes, I know my NHS number
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="nhs-number-2" name="nhs-number" type="radio" value="No"{{ checked("nhs-number", "No") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-2">
+                  No, I do not know my NHS number
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="nhs-number-3" name="nhs-number" type="radio" value="I'm not sure"{{ checked("nhs-number", "I'm not sure") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-3">
+                  I'm not sure
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="nhsuk-button">Continue</button>
+      </form>
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="/service/step2">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Previous question</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

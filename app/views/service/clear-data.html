@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Clear data from current session
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/service/start-page",
+  text: "Service home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Clear data
+      </h1>
+
+      <form method="post">
+
+        {{ panel({
+            "HTML": "<p>This will clear all of the data entered in this session</p>"
+        }) }}
+
+        {{ button({
+          "text": "Clear the data"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{{ footer({}) }}
+{% endblock %}

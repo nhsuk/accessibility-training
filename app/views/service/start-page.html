@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Register for our new service - NHS.UK
+{% endblock %}
+
+{% block beforeContent %}
+<div class="app-phase-banner">
+  <div class="nhsuk-width-container app-phase-banner__container">
+    <p class="app-phase-banner__content">
+      <strong class="nhsuk-tag app-phase-banner__tag">
+        Testing
+      </strong>
+      <span class="app-phase-banner__text">
+        This is not a real service. This site is used for testing purposes only.
+      </span>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Register for our new service
+      </h1>
+
+      <p>
+        Use this service to:
+      </p>
+
+      <ul>
+        <li>tell us your name</li>
+        <li>tell us your date of birth</li>
+        <li>tell us if you know your <a class="nhsuk-link---override" href="https://www.nhs.uk/using-the-nhs/about-the-nhs/what-is-an-nhs-number/">NHS number</a></li>
+        <li>tell us if you have had certain condtions</li>
+        <li>register your details</li>
+      </ul>
+
+      <p><a href="/service/step1" class="nhsuk-button nhsuk-u-margin-bottom-2 nhsuk-u-margin-top-4">Start now</a></p>
+
+    </div>
+
+    <aside class="nhsuk-grid-column-one-third">
+      <div class="nhsuk-related-nav">
+        <h1 class="nhsuk-heading-m nhsuk-u-margin-top-2">Other NHS services</h1>
+        <nav class="nhsuk-related-nav__nav-section">
+          <ul class="nhsuk-related-nav__list">
+            <li><a href="https://www.nhs.uk/service-search/other-services/Urgent-Care/LocationSearch/1824">Urgent care services</a></li>
+            <li><a href="https://www.nhs.uk/service-search/sexual-health">Sexual health services</a></li>
+            <li><a href="https://www.nhs.uk/service-search/pregnancy">Pregnancy services</a></li>
+            <li><a href="https://www.nhs.uk/service-search/mental-health" target="_blank">Mental health services</a></li>
+        </ul>
+        </nav>
+    </div>
+    </aside>
+
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <footer role="contentinfo">
+    <div class="nhsuk-footer" id="nhsuk-footer">
+      <div class="nhsuk-width-container">
+        <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+        <ul class="nhsuk-footer__list">
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/accessibility">Accessibility</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/our-policies/">Our policies</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/our-policies/cookies-policy/">Cookies</a></li>
+        </ul>
+        
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

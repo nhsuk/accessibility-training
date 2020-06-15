@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Have you had any of these conditions? - Register for our new service
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/service/start-page",
+  text: "Service home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/service/step5" method="post">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="conditions-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Have you ever had any of these conditions?
+              </h1>
+            </legend>
+            <span class="nhsuk-hint" id="conditions-hint">
+              Select all that apply
+            </span>
+            <span style="color:transparent">You have not selected an option. Please choose one!</span>
+            <div class="nhsuk-checkboxes nhsuk-checkboxes--override">
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order1">
+                <input class="nhsuk-checkboxes__input" id="c-asthma" name="condition" type="checkbox" value="Asthma"{{ checked("condition", "Asthma") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="c-asthma">
+                  Asthma
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order2">
+                <input class="nhsuk-checkboxes__input" id="c-epilepsy" name="condition" type="checkbox" value="Epilepsy"{{ checked("condition", "Epilepsy") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="c-epilepsy">
+                  Epilepsy
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order4">
+                <input class="nhsuk-checkboxes__input" id="c-heart-disease" name="condition" type="checkbox" value="Heart disease"{{ checked("condition", "Heart disease") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="c-heart-disease">
+                  Heart disease
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order3">
+                <input class="nhsuk-checkboxes__input" id="c-high-blood-pressure" name="condition" type="checkbox" value="High blood pressure"{{ checked("condition", "High blood pressure") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="c-high-blood-pressure">
+                  High blood pressure
+                </label>
+              </div>
+              <input name="condition" type="hidden" value=" ">
+            </div>
+          </fieldset>
+        </div>
+        <button class="nhsuk-button">Continue</button>
+      </form>
+      <div class="nhsuk-back-link">
+        <a href="/service/step3" class="nhsuk-back-link__link nhsuk-back-link__link--override">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Change my previous answer</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

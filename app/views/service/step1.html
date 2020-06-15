@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What is your name? - Register for our new service
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+   href: "/service/start-page",
+    text: "Service home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <form action="/service/step2" method="post">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            What is your name?
+          </h1>
+        </legend>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label">
+          <!-- <label class="nhsuk-label" for="first-name"> -->
+            First name
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-three-quarters" name="first-name" value="{{ data['first-name'] }}" type="text">
+          <!-- <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text"> -->
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="last-name">
+            Last name
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+        </div>
+      </fieldset>
+      <input value="sessionid" class="nhsuk-u-visually-hidden">
+      <button class="nhsuk-button">Continue</button>
+    </form>
+
+  </div>
+</div>
+{% endblock %}

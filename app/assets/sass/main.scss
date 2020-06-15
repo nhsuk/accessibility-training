@@ -1,0 +1,86 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/panel-confirmation';
+@import 'components/phase-banner';
+@import 'components/related-nav';
+@import 'components/tag';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below... 
+///////////////////////////////////////////
+.nhsuk-breadcrumb--override {
+  
+  .nhsuk-breadcrumb__link {
+
+    text-decoration: none;
+
+    &:hover {
+      color: $color_shade_nhsuk-blue-35;
+      
+    }
+  }
+}
+
+.nhsuk-link---override {
+  text-decoration: none;
+}
+
+.nhsuk-back-link__link--override {
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.nhsuk-table--override {
+  border-collapse: collapse;
+  display: inline-block;
+  margin-bottom: 0;
+
+  td, th {
+    border: 0;
+    padding: 0 nhsuk-spacing(4) 0 0;
+  }
+
+}
+
+.nhsuk-checkboxes--override {
+  display: flex;
+  flex-direction: column;
+
+  .nhsuk-checkboxes__item--order1 {
+    order: 1;
+  }
+  .nhsuk-checkboxes__item--order2 {
+    order: 2;
+  }
+  .nhsuk-checkboxes__item--order3 {
+    @include nhsuk-responsive-margin(2, "bottom");
+    order: 3;
+  }
+  .nhsuk-checkboxes__item--order4 {
+    order: 4;
+  }
+}
+
+.text-justified {
+  text-align: justify;
+}
+
+.accessibility-answers {
+  
+  h2 {
+    border-top: 4px solid $color_nhsuk-blue;
+    @include nhsuk-responsive-padding(4, "top");
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+  h2 {
+     border-top: 2px solid $color_nhsuk-blue;
+  }
+
+}
