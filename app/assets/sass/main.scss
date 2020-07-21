@@ -8,17 +8,17 @@
 @import 'components/tag';
 
 ///////////////////////////////////////////
-// Add your custom CSS/Sass styles below... 
+// Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 .nhsuk-breadcrumb--override {
-  
+
   .nhsuk-breadcrumb__link {
 
     text-decoration: none;
 
     &:hover {
       color: $color_shade_nhsuk-blue-35;
-      
+
     }
   }
 }
@@ -70,17 +70,27 @@
 }
 
 .accessibility-answers {
-  
+
+  p, a {
+    font-weight: normal;
+  }
+
   h2 {
     border-top: 4px solid $color_nhsuk-blue;
     @include nhsuk-responsive-padding(4, "top");
   }
 
   h3 {
-    margin-bottom: 0;
+    margin-bottom: nhsuk-spacing(2);
   }
   h2 {
      border-top: 2px solid $color_nhsuk-blue;
   }
+
+  ol > li {
+    font-size:1.3rem;
+  }
+
+  font-weight: bold;
 
 }

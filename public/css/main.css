@@ -6452,15 +6452,19 @@ b {
 .text-justified {
   text-align: justify; }
 
-.accessibility-answers h2 {
-  border-top: 4px solid #005eb8;
-  padding-top: 16px; }
-  @media (min-width: 40.0625em) {
-    .accessibility-answers h2 {
-      padding-top: 24px; } }
-
-.accessibility-answers h3 {
-  margin-bottom: 0; }
-
-.accessibility-answers h2 {
-  border-top: 2px solid #005eb8; }
+.accessibility-answers {
+  font-weight: bold; }
+  .accessibility-answers p, .accessibility-answers a {
+    font-weight: normal; }
+  .accessibility-answers h2 {
+    border-top: 4px solid #005eb8;
+    padding-top: 16px; }
+    @media (min-width: 40.0625em) {
+      .accessibility-answers h2 {
+        padding-top: 24px; } }
+  .accessibility-answers h3 {
+    margin-bottom: 8px; }
+  .accessibility-answers h2 {
+    border-top: 2px solid #005eb8; }
+  .accessibility-answers ol > li {
+    font-size: 1.3rem; }
