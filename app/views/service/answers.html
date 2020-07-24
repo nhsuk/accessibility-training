@@ -4,20 +4,22 @@
   Answers - accessibility training - NHS
 {% endblock %}
 
+{% block backLink %}
+{% endblock %}
+
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters accessibility-answers">
 
-      <h1>
-        Answers - accessibility issues for the register for a service
-      </h1>
+      <h1>Answers - accessibility issues for the register for a service</h1>
 
       <h2>Start page</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Two H1 tags</h3>
-          <p>There are two <code>H1</code> headings on the page - "Register for our new service" and "Other NHS services". The second one has been styled to be smaller. However, it is good practice to have only one <code>H1</code> tag on a page. The <code>H1</code> is the most important heading and describes the overall purpose of the page. Screen reader users can use headings to navigate a page by skipping to them so having a good heading structure helps.</p>
+          <p>There are two <code>H1</code> headings on the page - "Register for our new service" and "Other NHS services". The second one has been styled to be smaller. However, it is good practice to have only one <code>H1</code> tag on a page.</p>
+          <p>The <code>H1</code> is the most important heading and describes the overall purpose of the page. Screen reader users can use headings to navigate a page by skipping to them so having a good heading structure helps.</p>
           <h4>Understanding WCAG regarding headers</h4>
           <ul>
             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">1.3.1 Info and Relationships</a></li>
@@ -29,6 +31,16 @@
         <li class="nhsuk-u-margin-bottom-8">
           <h3>'NHS number' link text not underlined</h3>
           <p>Some users may not be able to perceive colour differences so would not identify this as a link. Links should be underlined or have some other non-colour visual distinction.</p>
+          <h4>Understanding WCAG regarding use of colour</h4>
+          <ul>
+            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></li>
+          </ul>
+        </li>
+        <li class="nhsuk-u-margin-bottom-8">
+          <h3>Do not rely on colour or position alone</h3>
+          <p>The instruction to "Click on the green 'Start now' button below to continue" has a few potential problems.</p>
+          <p>By saying that the button is green isolates those that have a colour vision deficiency who may not be able to distinguish between colours. Hopefully the fact that the button has the 'Start now' text would be sufficient for users to understand what to do next.</p>
+          <p>Also if the page is zoomed in, the button may not be immediately below the text so may cause confusion. Another point to note is that a screen reader user may not be able to see colour and position.</p>
           <h4>Understanding WCAG regarding use of colour</h4>
           <ul>
             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></li>
@@ -50,7 +62,8 @@
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>First name label not associated with the input field</h3>
-          <p>The 'First name' <code>label</code> element is missing a 'for' attribute and the <code>input</code> element is missing the associated 'id' attribute. This means the function or purpose of the input field may not be presented to screen reader users. Form labels also provide visible descriptions and provides a larger clickable area for the input field, since clicking on the label will activate it and bring it to focus. This can be helpful for users with impaired motor control.</p>
+          <p>The 'First name' <code>label</code> element is missing a 'for' attribute and the <code>input</code> element is missing the associated 'id' attribute. This means the function or purpose of the input field may not be presented to screen reader users.</p>
+          <p>Form labels also provide visible descriptions and provides a larger clickable area for the input field, since clicking on the label will activate it and bring it to focus. This can be helpful for users with impaired motor control.</p>
           <h4>Techniques for using form labels and inputs</h4>
           <ul>
             <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H44">Using label elements to associate text labels with form controls</a></li>
@@ -70,7 +83,7 @@
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Wrong page title</h3>
-          <p>Some screen readers (like JAWS) read the page title when a page loads. This page title is 'What is your name? - Register for our new service' which is incorrect as it should relate to what the page subject is, which in this case is asking what your date of birth is. The page title is the same as the previous page and has not been changed.</p>
+          <p>Some screen readers (like JAWS) read the page title when a page loads. This page title is 'What is your name? - Register for our new service' which is incorrect as it should relate to what the page subject is, which in this case is asking what your date of birth is. The page title is the same as the previous page and has not been changed correctly.</p>
           <h4>Understanding WCAG regarding page titles</h4>
           <ul>
             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">2.4.2: Page Titled</a></li>

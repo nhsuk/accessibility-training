@@ -1,14 +1,11 @@
 {% extends 'layout.html' %}
+{% set backLinkPage = "step2" %}
 
 {% block pageTitle %}
   Do you know your NHS number? - Register for our new service - NHS
 {% endblock %}
 
 {% block beforeContent %}
-{{ breadcrumb({
-  href: "/service/start-page",
-  text: "Service home"
-}) }}
 {% endblock %}
 
 {% block content %}
@@ -21,7 +18,7 @@
             <h1 class="nhsuk-fieldset__heading">
               Do you know your NHS number?
             </h1>
-          </legend>          
+          </legend>
           <span class="nhsuk-hint nhsuk-u-margin-bottom-2" id="nhsnumber-hint">
             Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span class="nhsuk-u-nowrap">485 777 3456</span>.
           </span>
@@ -50,14 +47,6 @@
         </fieldset>
         <button class="nhsuk-button">Continue</button>
       </form>
-
-      <div class="nhsuk-back-link">
-        <a class="nhsuk-back-link__link" href="/service/step2">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-        </svg>
-        Previous question</a>
-      </div>
 
     </div>
   </div>

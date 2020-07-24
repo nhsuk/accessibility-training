@@ -2,13 +2,13 @@
 
 This is a fictional NHS service website that can be used for accessibility training.
 
-It uses the <a href="https://service-manual.nhs.uk/design-system">NHS design system</a> which is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines. However accessibility issues can be introduced if the design system is misused, misunderstood or not implemented correctly, by many disciplines within a team such as content, design or development.
+It uses the <a href="https://service-manual.nhs.uk/design-system">NHS design system</a> which is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines. However accessibility issues can be introduced by many disciplines within a team (such as content, design or development) if the design system is misused, misunderstood or not implemented correctly.
 
 
 ## How to use this site
-This site contains several accessibility issues. The idea is to find as many of them as you can in a set period of time.
+This site contains several accessibility issues. The idea is to find as many of them as you can.
 
-There is an accompanying worksheet and an answer sheet.
+There is an accompanying testing notes and answer page.
 
 
 ## How to run this site locally

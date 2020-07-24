@@ -12,11 +12,14 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  NHS.UK accessibility training
+  NHS.UK accessibility training excercise
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{% endblock %}
+
+{% block backLink %}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -25,15 +28,39 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        NHS.UK accessibility training
-      </h1>
+      <h1>Accessibility training excercise</h1>
 
-      <p>These training pages will highlight some of the common accessibility issues that online NHS services may face.</p>
+      <h2>Introduction</h2>
+
+      <p>This excercise is based on a a fictional NHS service website which uses the <a href="https://service-manual.nhs.uk/design-system">NHS design system</a>. The design system is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines.</p>
+
+      <p>However accessibility issues can be introduced by many disciplines within a team (such as content, design or development) if the design system is misused, misunderstood or not implemented correctly.</p>
+
+      <p>This site contains several accessibility issues. The idea is to find as many of them as you can.</p>
+
+      <h2>"Register for a service" fictional site</h2>
+
+      <p>Please read the <a href="/service/testing-notes">testing notes</a> first to get you started on how you can test for accessibility issues.</p>
+
+      <p>There is also an <a href="/service/answers">answers</a> page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
+
+      <p>Please note that no details you enter are kept or sent anywhere.</p>
+
+      <p>There are 7 pages in this fictional service:</p>
 
       <ul>
-        <li><a href="service/start-page">NHS transactional service</a></li>
+        <li>Start page</li>
+        <li>What is your name?</li>
+        <li>What is your date of birth?</li>
+        <li>Do you know your NHS number</li>
+        <li>Have you had any of these conditions?</li>
+        <li>Check your answers</li>
+        <li>Registration complete</li>
       </ul>
+
+      <p>Accessibility issues start on the next 'Start' page.</p>
+
+      <p><a class="nhsuk-button" href="/service/start-page">Continue</a></p>
 
     </div>
   </div>

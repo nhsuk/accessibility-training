@@ -1,14 +1,11 @@
 {% extends 'layout.html' %}
+{% set backLinkPage = "start-page" %}
 
 {% block pageTitle %}
   What is your name? - Register for our new service - NHS
 {% endblock %}
 
 {% block beforeContent %}
-{{ breadcrumb({
-   href: "/service/start-page",
-    text: "Service home"
-}) }}
 {% endblock %}
 
 {% block content %}
