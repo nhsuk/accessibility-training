@@ -32,19 +32,19 @@
 
       <h2>Introduction</h2>
 
-      <p>This excercise is based on a a fictional NHS service website which uses the <a href="https://service-manual.nhs.uk/design-system">NHS design system</a>. The design system is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines.</p>
+      <p>This exercise is based on a a fictional NHS service website which uses the <a href="https://service-manual.nhs.uk/design-system">NHS design system</a>. The design system is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines.</p>
 
-      <p>However accessibility issues can be introduced by many disciplines within a team (such as content, design or development) if the design system is misused, misunderstood or not implemented correctly.</p>
+      <p>However accessibility issues can be introduced by various team members (e.g. content editors/designers, designers or developers) if the design system is misused, misunderstood or not implemented correctly.</p>
 
       <p>This site contains several accessibility issues. The idea is to find as many of them as you can.</p>
 
       <h2>"Register for a service" fictional site</h2>
 
-      <p>Please read the <a href="/service/testing-notes">testing notes</a> first to get you started on how you can test for accessibility issues.</p>
+      <p>Read the <a href="/service/testing-notes">testing notes</a> first to get you started on how you can test for accessibility issues.</p>
 
       <p>There is also an <a href="/service/answers">answers</a> page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
 
-      <p>Please note that no details you enter are kept or sent anywhere.</p>
+      <p>No details you enter are kept or sent anywhere.</p>
 
       <p>There are 7 pages in this fictional service:</p>
 
@@ -60,8 +60,23 @@
 
       <p>Accessibility issues start on the next 'Start' page.</p>
 
-      <p><a class="nhsuk-button" href="/service/start-page">Continue</a></p>
+      <p class="nhsuk-u-margin-bottom-0"><a class="nhsuk-button" href="/service/start-page">Continue</a></p>
 
     </div>
   </div>
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Home</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/service/testing-notes">Testing notes</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/service/answers">Answers</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 {% endblock %}

@@ -14,7 +14,7 @@
       <h1>Testing notes</h1>
 
       <p>To help find accessibility issues you could use the <a href="https://wave.webaim.org/extension/">WAVE browser extension</a> for Chrome or Firefox.</p>
-      <p>Please note that WAVE, as with other automated evaluation tools, will not tell you all the accessibility issues that occur on a web page. They can only test some of the accessibility requirements that do not need human intervention. Testing done by humans is essential to ensure an accessible user experience.</p>
+      <p>Please note that WAVE, as with other automated evaluation tools, will not tell you all the accessibility issues that occur on a web page. They can only test some of the accessibility requirements that do not need human intervention. Manual testing by humans must be done to ensure an accessible user experience.</p>
 
       <h2>Testing checklist</h2>
 
@@ -24,7 +24,7 @@
         <li>Are <a href="https://service-manual.nhs.uk/accessibility/testing#use-headings-correctly">headings</a> used correctly?</li>
         <li>Can you access everything using the <a href="https://service-manual.nhs.uk/accessibility/testing#check-keyboard-accessibility">keyboard</a>?</li>
         <li>Are <a href="https://service-manual.nhs.uk/accessibility/testing#label-form-fields-clearly">form fields</a> labeled correctly?</li>
-        <li>Are there any <a href="">colour contrast</a> errors or <a href="">reliance on colour alone?</a></li>
+        <li>Are there any <a href="https://service-manual.nhs.uk/accessibility/testing#check-colour-contrast">colour contrast</a> errors or <a href="https://service-manual.nhs.uk/accessibility/testing#do-not-rely-on-colour-or-position-alone">reliance on colour alone?</a></li>
       </ul>
 
       <p>The NHS Digital service manual has further <a href="https://service-manual.nhs.uk/accessibility/testing">guidance on accessibility testing</a> which you could refer to for more checks.</p>
@@ -32,4 +32,19 @@
     </div>
 
   </div>
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Home</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/service/testing-notes">Testing notes</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/service/answers">Answers</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 {% endblock %}
