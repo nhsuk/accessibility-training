@@ -5,6 +5,12 @@
   Do you know your NHS number? - Register for our new service - NHS
 {% endblock %}
 
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/main.js"></script>
+{% endblock %}
+
 {% block beforeContent %}
 {% endblock %}
 
@@ -20,8 +26,22 @@
             </h1>
           </legend>
           <span class="nhsuk-hint nhsuk-u-margin-bottom-2" id="nhsnumber-hint">
-            Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span class="nhsuk-u-nowrap">485 777 3456</span>.
+            Your NHS number is a 10 digit number, like <span class="nhsuk-u-nowrap">485 777 3456</span>.
           </span>
+
+          <p><a href="" onclick="openDialog('dialog1', this)">Where can I find my NHS number?</a>
+
+          <div id="dialog_layer" class="dialogs">
+            <div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
+              <h2 id="dialog1_label" class="dialog_label">Where can I find my NHS number?</h2>
+              <p>You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service.</p>
+              <p><a href="https://www.nhs.uk/using-the-nhs/about-the-nhs/what-is-an-nhs-number/">About your NHS Number</a></p>
+              <div class="dialog_form_actions">
+                <button class="nhsuk-button nhsuk-u-margin-bottom-1 dialog-button dialog-button--close" onclick="closeDialog(this)">Close</button>
+              </div>
+            </div>
+          </div>
+
           <div class="nhsuk-form-group">
             <div class="nhsuk-radios">
               <div class="nhsuk-radios__item">
@@ -50,4 +70,17 @@
 
     </div>
   </div>
+
+  <!-- JavaScript hack to do nothing if dialog button or link href="" clicked and to trap keypresses -->
+  <script>
+    $( document ).ready(function() {
+      $('a[href=""], button.dialog-button').click(function(e) {
+        e.preventDefault();
+      });
+      $('button.dialog-button--close').keydown(function(e) {
+        e.preventDefault();
+      });
+    });
+  </script>
+
 {% endblock %}
