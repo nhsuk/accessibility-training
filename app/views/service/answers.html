@@ -32,19 +32,13 @@
           <h3>'NHS number' link text not underlined</h3>
           <p>Some users may not be able to perceive colour differences so would not identify this as a link. Links should be underlined or have some other non-colour visual distinction.</p>
           <h4>Understanding WCAG regarding use of colour</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Do not rely on colour or position alone</h3>
           <p>The instruction to "Click on the green 'Start now' button below to continue" has a few potential problems.</p>
           <p>By saying that the button is green isolates those that have a colour vision deficiency who may not be able to distinguish between colours. Hopefully the fact that the button has the 'Start now' text would be sufficient for users to understand what to do next.</p>
           <p>Also if the page is zoomed in, the button may not be immediately below the text so may cause confusion. Another point to note is that a screen reader user may not be able to see colour and position.</p>
-          <h4>Understanding WCAG regarding use of colour</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></li>
-          </ul>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>'Mental health services' link opens in new tab</h3>
@@ -65,17 +59,13 @@
           <p>The 'First name' <code>label</code> element is missing a 'for' attribute and the <code>input</code> element is missing the associated 'id' attribute. This means the function or purpose of the input field may not be presented to screen reader users.</p>
           <p>Form labels also provide visible descriptions and provides a larger clickable area for the input field, since clicking on the label will activate it and bring it to focus. This can be helpful for users with impaired motor control.</p>
           <h4>Techniques for using form labels and inputs</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H44">Using label elements to associate text labels with form controls</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H44">Using label elements to associate text labels with form controls</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Visually hidden item you can tab onto</h3>
           <p>There is a visually hidden input field that can be tabbed to and is read out by screen readers. This might be used for example to pass data between pages. Although the input field is hidden off screen, it still receives focus. This could confuse keyboard users who are tabbing through the page because the focus would disappear and also screen reader users as it has no label.</p>
           <h4>Understanding WCAG regarding focus</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html">3.2.1: On Focus</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html">3.2.1: On Focus</a></p>
         </li>
       </ol>
 
@@ -85,35 +75,27 @@
           <h3>Wrong page title</h3>
           <p>Some screen readers (like JAWS) read the page title when a page loads. This page title is 'What is your name? - Register for our new service' which is incorrect as it should relate to what the page subject is, which in this case is asking what your date of birth is. The page title is the same as the previous page and has not been changed correctly.</p>
           <h4>Understanding WCAG regarding page titles</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">2.4.2: Page Titled</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">2.4.2: Page Titled</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>No legend element</h3>
           <p>The input fields are all related to each other so are grouped together using a <code>fieldset</code> element. We can tell visually that they are to do with 'date of birth' by the heading. However, it may not be obvious that this is the case for those who cannot see. To associate the input fields with the heading, use a <code>legend</code> element, which provides a label or description for the group. And to fix this page, we would use the <code>H1</code> element inside the <code>legend</code> element, as per the <a href="https://service-manual.nhs.uk/design-system/components/fieldset">digital service manual guidance on fieldset</a>.
           <h4>Techniques regarding fieldsets and legends</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H71">Providing a description for groups of form controls using fieldset and legend elements</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H71">Providing a description for groups of form controls using fieldset and legend elements</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>The inputs are marked up in a table element</h3>
           <p>A table element has been used to get the positioning and layout correct visually for the date of birth inputs. Although this is valid HTML and would pass any automated tests, you have to consider how a screen reader will read this. In this instance, a screen reader would ignore the fact that the content is inside a table and will read the content in the literal order that it appears in the code. So, for example, VoiceOver on iOS would read this as something like: "day, month, year, day - text field, month - text field, year - text field". It would be preferable to have the text fields read out after each of the labels, rather that reading all of the labels first, which is the order in which they appear in the code.</p>
           <p>The correct code for this can be found in the <a href="https://service-manual.nhs.uk/design-system/components/date-input">digital service manual guidance on date inputs</a>.</p>
           <h4>Information regarding use of tables for layout</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F49">Using an HTML layout table that does not make sense when linearized</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F49">Using an HTML layout table that does not make sense when linearized</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Continue button not keyboard focusable</h3>
           <p>Many users with motor disabilities rely on using a keyboard when using the web. Blind users typically use a keyboard to navigate websites. A keyboard user typically uses the tab key to navigate through interactive elements such as links and form elements so would expect to be able to tab to the continue button and then press the enter key to submit the form and continue. In this case the continue button is not focusable which may cause confusion. It is possible to submit the form by pressing enter while on one of the input fields, but the user may not know this.</p>
           <p>The fix is to remove the "tabindex=-1" attribute on the continue button.</p>
           <h4>Understanding WCAG regarding keyboard accessible</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">Wherever possible content can be operated through a keyboard or keyboard interface</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">Wherever possible content can be operated through a keyboard or keyboard interface</a></p>
         </li>
       </ol>
 
@@ -124,18 +106,14 @@
           <p>When using the keyboard, tabbing to the "Where can I find my NHS number?" and activating the link results in a modal dialog appearing. Tabbing to the close button and then trying to activate this results in nothing. There is no response using any key press. This includes pressing the escape button, which is the expected key to press to close the dialog </p>
           <p>Users who only use the keyboard to navigate websites must be able to navigate to and away from content. In this case they are trapped on the "Close" button.</p>
           <h4>Understanding WCAG regarding no keyboard trap</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html">2.1.2 No keyboard trap</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html">2.1.2 No keyboard trap</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>&quot;Continue&quot; button not accessible to speech recognition</h3>
           <p>Users of speech recognition cannot activate the &quot;Continue&quot; button because it has an aria label of &quot;Submit&quot;. This overrides the visible label so saying &quot;Click continue&quot; or &quot;Tap continue&quot; will not work.</p>
           <p>Words which visually label a component should contain or match it's programmatic or accessible name.</p>
           <h4>Understanding WCAG regarding visible labels</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">2.5.3 Label in name</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">2.5.3 Label in name</a></p>
         </li>
       </ol>
 
@@ -145,45 +123,37 @@
           <h3>Altered tab order of the checkboxes</h3>
           <p>When keyboard tabbing through the options, focus jumps from asthma, to epilepsy, to heart disease and then to high blood pressure. This behaviour is unexpected and may be disorienting. Although this is unlikely to happen in practice, it does highlight the need to be predictable and logical. Users navigating by keyboard expect to move sequentially from left to right and top to bottom through focusable elements such as links and form controls.</p>
           <h4>Understanding WCAG regarding focus order</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html">2.4.3 Focus order</a></li>
-          </ul>
-        </li>
-        <li class="nhsuk-u-margin-bottom-8">
-          <h3>Poor focus styling on previous answer link</h3>
-          <p>Those who use the keyboard to operate the page need to be able to visually determine what element has focus. In this case the focus state style may not have a high enough contrast for this to be true for users who have sight loss. Better visual focus would also benefit those with attention limitations and short term memory limitations by being able to discover where the focus is located.</p>
-          <h4>Understanding WCAG regarding focus visible</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html">2.4.7 Focus visible</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html">2.4.3 Focus order</a></p>
         </li>
       </ol>
 
       <h2>Check your answers</h2>
       <ol>
+       <li class="nhsuk-u-margin-bottom-8">
+          <h3>Poor focus styling on the second change link</h3>
+          <p>Those who use the keyboard to operate the page need to be able to visually determine what element has focus. In this case the focus state style may not have a high enough contrast for this to be true for users who have sight loss. Better visual focus would also benefit those with attention limitations and short term memory limitations by being able to discover where the focus is located.</p>
+          <h4>Understandng WCAG regarding focus visible</h4>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html">2.4.7 Focus visible</a></p>
+        </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Change link - hidden text is incorrect</h3>
           <p>Users of assistive technology may navigate a page by links, moving from one link to the next. This page would present a problem because most of the links are called "Change", which would not make much sense when read out one after another on a screen reader. Visually they do make sense as they appear next to the questions.</p>
           <p>Ideally the link text should be more descriptive, such as "Change name" or "Change date of birth" but that may look strange as the question appears next to the link. Therefore the solution is to visually hide this extra text. However, there is an error on this page in that the "Do you know your NHS number?" change text is "Change date of birth" (the same as the previous one), instead of something like "Change if you know your NHS number".</p>
           <h4>Techniques regarding hiding a portion of link text </h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C7.html">Using CSS to hide a portion of the link text</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C7.html">Using CSS to hide a portion of the link text</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Incorrect heading level hierarchy</h3>
           <p>The heading hierarchy on this page consists of a <code>H1</code> ("Check your answers") going to a <code>H3</code> ("Now send your details"). The second heading should be a <code>h2</code> as it is a direct descendant of the main <code>H1</code> heading. Screen reader users can use headings to navigate the page and use short cut keys to jump quickly from heading to heading. Headings also help them understand the structure of the information on the page. Skipping heading levels can be confusing as users may not be able to navigate as expected and  may think something is missing.</p>
           <h4>Information about headings</h4>
-          <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G141">Organising a page using headings</a></li>
-          </ul>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G141">Organising a page using headings</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Justified text</h3>
           <p>Text that is aligned to both the left and right margins forces words and letters to be spaced out more than normal. These spaces create "rivers of white" running down the page, which can make it difficult for people with cognitive disabilities to read.</p>
           <h4>Understanding WCAG regarding visual presentation and information about aligning text</h4>
           <ul>
-            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html">1.4.8 Visual presentation</li>
+            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html">1.4.8 Visual presentation</a></li>
             <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G169">Aligning text on only one side</a></li>
           </ul>
         </li>

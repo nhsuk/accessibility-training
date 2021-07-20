@@ -24,11 +24,11 @@
   }
 }
 
-.nhsuk-link---override {
+.nhsuk-link--override {
   text-decoration: none;
 }
 
-.nhsuk-back-link__link--override {
+.nhsuk-link--override__focus {
   &:focus {
     background-color: transparent;
     box-shadow: none;
