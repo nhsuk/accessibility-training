@@ -29,7 +29,7 @@
           </ul>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
-          <h3>'NHS number' link text not underlined</h3>
+          <h3>"NHS number" link text not underlined</h3>
           <p>Some users may not be able to perceive colour differences so would not identify this as a link. Links should be underlined or have some other non-colour visual distinction.</p>
           <h4>Understanding WCAG regarding use of colour</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></p>
@@ -37,11 +37,11 @@
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Do not rely on colour or position alone</h3>
           <p>The instruction to "Click on the green 'Start now' button below to continue" has a few potential problems.</p>
-          <p>By saying that the button is green isolates those that have a colour vision deficiency who may not be able to distinguish between colours. Hopefully the fact that the button has the 'Start now' text would be sufficient for users to understand what to do next.</p>
+          <p>By saying that the button is green isolates those that have a colour vision deficiency who may not be able to distinguish between colours. Hopefully the fact that the button has the "Start now" text would be sufficient for users to understand what to do next.</p>
           <p>Also if the page is zoomed in, the button may not be immediately below the text so may cause confusion. Another point to note is that a screen reader user may not be able to see colour and position.</p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
-          <h3>'Mental health services' link opens in new tab</h3>
+          <h3>"Mental health services" link opens in new tab</h3>
           <p>Opening a new tab (or window) when a link is activated can be disorienting for some users if they are not warned in advance. Users may be unaware that it has happened and won't be able to use the back button as there is no history in the new tab.</p>
           <h4>Techniques for opening new tabs or windows</h4>
           <ul>
@@ -56,7 +56,7 @@
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>First name label not associated with the input field</h3>
-          <p>The 'First name' <code>label</code> element is missing a 'for' attribute and the <code>input</code> element is missing the associated 'id' attribute. This means the function or purpose of the input field may not be presented to screen reader users.</p>
+          <p>The "First name" <code>label</code> element is missing a "for" attribute and the <code>input</code> element is missing the associated "id" attribute. This means the function or purpose of the input field may not be presented to screen reader users.</p>
           <p>Form labels also provide visible descriptions and provides a larger clickable area for the input field, since clicking on the label will activate it and bring it to focus. This can be helpful for users with impaired motor control.</p>
           <h4>Techniques for using form labels and inputs</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H44">Using label elements to associate text labels with form controls</a></p>
@@ -73,13 +73,13 @@
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Wrong page title</h3>
-          <p>Some screen readers (like JAWS) read the page title when a page loads. This page title is 'What is your name? - Register for our new service' which is incorrect as it should relate to what the page subject is, which in this case is asking what your date of birth is. The page title is the same as the previous page and has not been changed correctly.</p>
+          <p>Some screen readers (like JAWS) read the page title when a page loads. This page title is "What is your name? - Register for our new service" which is incorrect as it should relate to what the page subject is, which in this case is asking what your date of birth is. The page title is the same as the previous page and has not been changed correctly.</p>
           <h4>Understanding WCAG regarding page titles</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">2.4.2: Page Titled</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>No legend element</h3>
-          <p>The input fields are all related to each other so are grouped together using a <code>fieldset</code> element. We can tell visually that they are to do with 'date of birth' by the heading. However, it may not be obvious that this is the case for those who cannot see. To associate the input fields with the heading, use a <code>legend</code> element, which provides a label or description for the group. And to fix this page, we would use the <code>H1</code> element inside the <code>legend</code> element, as per the <a href="https://service-manual.nhs.uk/design-system/components/fieldset">digital service manual guidance on fieldset</a>.
+          <p>The input fields are all related to each other so are grouped together using a <code>fieldset</code> element. We can tell visually that they are to do with "date of birth" by the heading. However, it may not be obvious that this is the case for those who cannot see. To associate the input fields with the heading, use a <code>legend</code> element, which provides a label or description for the group. And to fix this page, we would use the <code>H1</code> element inside the <code>legend</code> element, as per the <a href="https://service-manual.nhs.uk/design-system/components/fieldset">digital service manual guidance on fieldset</a>.
           <h4>Techniques regarding fieldsets and legends</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H71">Providing a description for groups of form controls using fieldset and legend elements</a></p>
         </li>
@@ -89,6 +89,13 @@
           <p>The correct code for this can be found in the <a href="https://service-manual.nhs.uk/design-system/components/date-input">digital service manual guidance on date inputs</a>.</p>
           <h4>Information regarding use of tables for layout</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F49">Using an HTML layout table that does not make sense when linearized</a></p>
+        </li>
+        <li class="nhsuk-u-margin-bottom-8">
+          <h3>Entering content in a date field unexpectedly moves to the next one</h3>
+          <p>If you enter 2 characters in the "Day" or "Month" input fields, focus automatically moves to the next input field. Although this may save the user time in not having to tab or click into the next input field, this is unexpected behaviour and could disorientate users if they have not been told of this behaviour before entering content in the input fields.</p>
+          <p>This also has the side effect that when using the keyboard, the way this functionality has been written makes it difficult to edit the previous input field if using the shift tab key combination to move back.</p>
+          <h4>Understanding WCAG regarding being automatically taken elsewhere on input</h4>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-input.html">3.2.2: On input</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Continue button not keyboard focusable</h3>
@@ -109,8 +116,8 @@
           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html">2.1.2 No keyboard trap</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
-          <h3>&quot;Continue&quot; button not accessible to speech recognition</h3>
-          <p>Users of speech recognition cannot activate the &quot;Continue&quot; button because it has an aria label of &quot;Submit&quot;. This overrides the visible label so saying &quot;Click continue&quot; or &quot;Tap continue&quot; will not work.</p>
+          <h3>"Continue" button not accessible to speech recognition</h3>
+          <p>Users of speech recognition cannot activate the "Continue" button because it has an aria label of "Submit". This overrides the visible label so saying "Click continue" or "Tap continue" will not work.</p>
           <p>Words which visually label a component should contain or match it's programmatic or accessible name.</p>
           <h4>Understanding WCAG regarding visible labels</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">2.5.3 Label in name</a></p>
