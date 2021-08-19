@@ -14,7 +14,20 @@
 
       <h1>Answers - accessibility issues for the register for a service</h1>
 
-      <h2>Start page</h2>
+      <nav>
+        <h2>Pages</h2>
+        <ul class="nhsuk-u-margin-bottom-5">
+          <li><a href="#start">Start page</a></li>
+          <li><a href="#name">What is yout name?</a></li>
+          <li><a href="#dob">What is your date of birth?</a></li>
+          <li><a href="#nhs">Do you know your NHS number?</a></li>
+          <li><a href="#conditions">Have you ever had any of these conditions?</a></li>
+          <li><a href="#answers">Check your answers?</a></li>
+          <li><a href="#complete">Registration complete</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="start">Start page</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Two H1 tags</h3>
@@ -52,7 +65,7 @@
         </li>
       </ol>
 
-      <h2>What is your name?</h2>
+      <h2 id="name">What is your name?</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>First name label not associated with the input field</h3>
@@ -69,7 +82,7 @@
         </li>
       </ol>
 
-      <h2>What is your date of birth?</h2>
+      <h2 id="dob">What is your date of birth?</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Wrong page title</h3>
@@ -106,7 +119,7 @@
         </li>
       </ol>
 
-      <h2>Do you know your NHS number?</h2>
+      <h2 id="nhs">Do you know your NHS number?</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Keyboard trap on the modal dialog</h3>
@@ -116,15 +129,16 @@
           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html">2.1.2 No keyboard trap</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
-          <h3>"Continue" button not accessible to speech recognition</h3>
-          <p>Users of speech recognition cannot activate the "Continue" button because it has an aria label of "Submit". This overrides the visible label so saying "Click continue" or "Tap continue" will not work.</p>
-          <p>Words which visually label a component should contain or match it's programmatic or accessible name.</p>
+          <h3>"Continue" button is not accessible to speech recognition</h3>
+          <p>Speech-input users, such as those that rely on speech recognition software, interact with web pages using voice commands. For example they can navigate a page, select links, fill in form fields and select buttons by saying the appropriate words. Visual labels help the user with what words to say. For example, if there is a link called "Homepage", then the user could say "Click homepage".</p>
+          <p>On this page there is a button which has a visual label of "Continue". Therefore you would expect to be able to activate this by saying  "Click continue" or "Tap continue". However, the button has been coded with a different name that assistive technologies understand, known as its accessible name. In this case the button has an accessible name of "Submit" (via the aria-label attribute) and so the speech recognition software would not understand the command "Click continue" which would cause an issue.</p>
+          <p>It is important that the visual text label of an element should match or be included in its accessible name.</p>
           <h4>Understanding WCAG regarding visible labels</h4>
           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">2.5.3 Label in name</a></p>
         </li>
       </ol>
 
-      <h2>Have you ever had any of these conditions?</h2>
+      <h2 id="conditions">Have you ever had any of these conditions?</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Altered tab order of the checkboxes</h3>
@@ -134,7 +148,7 @@
         </li>
       </ol>
 
-      <h2>Check your answers</h2>
+      <h2 id="answers">Check your answers</h2>
       <ol>
        <li class="nhsuk-u-margin-bottom-8">
           <h3>Poor focus styling on the second change link</h3>
@@ -166,7 +180,7 @@
         </li>
       </ol>
 
-      <h2>Registration complete</h2>
+      <h2 id="complete">Registration complete</h2>
       <ol>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Use of capital letters</h3>
