@@ -26,6 +26,12 @@
 
 .nhsuk-link--override {
   text-decoration: none;
+
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
 }
 
 .nhsuk-link--override__focus {

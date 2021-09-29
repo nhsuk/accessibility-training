@@ -8013,6 +8013,10 @@ b {
 .nhsuk-link--override {
   text-decoration: none;
 }
+.nhsuk-link--override:focus {
+  background-color: transparent;
+  box-shadow: none;
+}
 
 .nhsuk-link--override__focus:focus {
   background-color: transparent;

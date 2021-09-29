@@ -4,6 +4,25 @@
   Register for our new service - NHS.UK
 {% endblock %}
 
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <!-- lock orientation to portrait when rotating small device to landscape -->
+  <style>
+    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+      html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+    }
+  </style>
+{% endblock %}
+
 {% block beforeContent %}
 <div class="app-phase-banner">
   <div class="nhsuk-width-container app-phase-banner__container">
@@ -77,3 +96,4 @@
     </div>
   </footer>
 {% endblock %}
+

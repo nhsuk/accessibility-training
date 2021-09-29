@@ -52,6 +52,10 @@
           <p>The instruction to "Click on the green 'Start now' button below to continue" has a few potential problems.</p>
           <p>By saying that the button is green isolates those that have a colour vision deficiency who may not be able to distinguish between colours. Hopefully the fact that the button has the "Start now" text would be sufficient for users to understand what to do next.</p>
           <p>Also if the page is zoomed in, the button may not be immediately below the text so may cause confusion. Another point to note is that a screen reader user may not be able to see colour and position.</p>
+          <h4>Understanding WCAG regarding sensory characteristics</h4>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics">1.3.3 Sensory characteristics</a></p>
+          <h4>Understanding WCAG regarding use of colour</h4>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">1.4.1 Use of Color</a></p>
         </li>
         <li class="nhsuk-u-margin-bottom-8">
           <h3>"Mental health services" link opens in new tab</h3>
@@ -62,6 +66,12 @@
             <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G200">Opening new windows and tabs from a link only when necessary</a></li>
             <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G201">Giving users advanced warning when opening a new window</a></li>
           </ul>
+        </li>
+        <li class="nhsuk-u-margin-bottom-8">
+          <h3>Orientation is locked to portrait view</h3>
+          <p>When viewing this page on a mobile device in landscape mode the content does not adapt to make it easily viewable. The orientation is locked in portrait mode. This could cause problems for some users who have their devices mounted in a fixed orientation or those that have a visual impairment and finds one orientation easier to use. Therefore websites should support both orientations and adapt accordingly.</p>
+          <h4>Understanding WCAG regarding orientation</h4>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">1.3.4: Orientation</a></p>
         </li>
       </ol>
 
@@ -77,8 +87,8 @@
         <li class="nhsuk-u-margin-bottom-8">
           <h3>Visually hidden item you can tab onto</h3>
           <p>There is a visually hidden input field that can be tabbed to and is read out by screen readers. This might be used for example to pass data between pages. Although the input field is hidden off screen, it still receives focus. This could confuse keyboard users who are tabbing through the page because the focus would disappear and also screen reader users as it has no label.</p>
-          <h4>Understanding WCAG regarding focus</h4>
-          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html">3.2.1: On Focus</a></p>
+          <h4>Understanding WCAG regarding focus order</h4>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order">2.4.3: Focus order</a></p>
         </li>
       </ol>
 
@@ -115,7 +125,7 @@
           <p>Many users with motor disabilities rely on using a keyboard when using the web. Blind users typically use a keyboard to navigate websites. A keyboard user typically uses the tab key to navigate through interactive elements such as links and form elements so would expect to be able to tab to the continue button and then press the enter key to submit the form and continue. In this case the continue button is not focusable which may cause confusion. It is possible to submit the form by pressing enter while on one of the input fields, but the user may not know this.</p>
           <p>The fix is to remove the "tabindex=-1" attribute on the continue button.</p>
           <h4>Understanding WCAG regarding keyboard accessible</h4>
-          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">Wherever possible content can be operated through a keyboard or keyboard interface</a></p>
+          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">2.1.1: Keyboard</a></p>
         </li>
       </ol>
 
