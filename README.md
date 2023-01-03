@@ -24,7 +24,7 @@ To run it locally:
 The site should now be running at `http://localhost:3000`
 
 
-If you can't run this site locally, you can [view the site here](https://nhs-accessibility.herokuapp.com/).
+If you can't run this site locally, you can [view the site here](https://nhs-accessibility.onrender.com/).
 
 ## Thanks
 This testing site is inspired by the ['Training people to do accessibility reviews'](https://accessibility.blog.gov.uk/2020/01/14/training-people-to-do-accessibility-reviews/) blog article by Beverley Newing at the Ministry of Justice. This site is based on the ['Record a goose sighting'](https://record-a-goose-sighting.herokuapp.com/) fictional service she created.
