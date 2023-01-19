@@ -8,9 +8,9 @@ However accessibility issues can be introduced by various team members (e.g. con
 ## How to use this site
 This site contains several accessibility issues. The idea is to find as many of them as you can.
 
-Read the [testing notes](https://nhs-accessibility.herokuapp.com/service/testing-notes) first to get you started on how you can test for accessibility issues.
+Read the [testing notes](https://nhs-accessibility.onrender.com/service/testing-notes) first to get you started on how you can test for accessibility issues.
 
-There is also an [answers](https://nhs-accessibility.herokuapp.com/service/answers) page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
+There is also an [answers](https://nhs-accessibility.onrender.com/service/answers) page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
 
 
 ## How to run this site locally
