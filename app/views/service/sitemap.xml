@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost:3000/</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/start-page</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/step1</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/step2</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/step3</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/step4</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/step5</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/confirmation</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/testing-notes</loc>
+  </url>
+    <url>
+    <loc>http://localhost:3000/service/answers</loc>
+  </url>
+</urlset>
