@@ -29,13 +29,12 @@
             Your NHS number is a 10 digit number, like <span class="nhsuk-u-nowrap">485 777 3456</span>.
           </span>
 
-          <p><a href="" onclick="openDialog('dialog1', this)">Where can I find my NHS number?</a>
+          <p><a href="" onclick="openDialog('dialog', this)">Where can I find my NHS number?</a>
 
           <div id="dialog_layer" class="dialogs">
-            <div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
-              <h2 id="dialog1_label" class="dialog_label">Where can I find my NHS number?</h2>
-              <p>You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service.</p>
-              <p><a href="https://www.nhs.uk/using-the-nhs/about-the-nhs/what-is-an-nhs-number/">About your NHS Number</a></p>
+            <div role="dialog" id="dialog" aria-labelledby="dialog_label" aria-describedby="dialog_desc" aria-modal="true" class="hidden">
+              <h2 id="dialog_label" class="dialog_label">Where can I find my NHS number?</h2>
+              <p id="dialog_desc">You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service.</p>
               <div class="dialog_form_actions">
                 <button class="nhsuk-button nhsuk-u-margin-bottom-1 dialog-button dialog-button--close" onclick="closeDialog(this)">Close</button>
               </div>
