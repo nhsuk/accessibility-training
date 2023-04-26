@@ -8,9 +8,9 @@ However accessibility issues can be introduced if the design system is misused, 
 
 This site contains several accessibility issues. The idea is to find as many of them as you can.
 
-Read the [testing notes](https://nhs-accessibility.onrender.com/service/testing-notes) first to get you started on how you can test for accessibility issues.
+Read the [testing notes](https://nhs-accessibility-training.onrender.com/service/testing-notes) first to get you started on how you can test for accessibility issues.
 
-There is also an [answers](https://nhs-accessibility.onrender.com/service/answers) page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
+There is also an [answers](https://nhs-accessibility-training.onrender.com/service/answers) page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
 
 ## How to run this site locally
 
@@ -24,7 +24,7 @@ To run it locally:
 
 The site should now be running at `http://localhost:3000`
 
-If you can't run this site locally, you can [view the site here](https://nhs-accessibility.onrender.com/).
+If you can't run this site locally, you can [view the site here](https://nhs-accessibility-training.onrender.com/).
 
 ## Thanks
 
@@ -32,4 +32,4 @@ This testing site is inspired by the ['Training people to do accessibility revie
 
 ## Contribute
 
-Feedback is welcome. Feel free to [submit an issue](https://github.com/mcheung-nhs/accessibility-testing/issues) or [open a pull request](https://github.com/mcheung-nhs/accessibility-testing/pulls).
+Feedback is welcome. Feel free to [submit an issue](https://github.com/nhsuk/accessibility-training/issues) or [open a pull request](https://github.com/nhsuk/accessibility-training/pulls).
