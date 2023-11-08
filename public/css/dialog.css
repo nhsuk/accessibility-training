@@ -9,9 +9,10 @@
 
 [role=alertdialog],
 [role=dialog] {
+  border-radius: 20px;
   box-sizing: border-box;
   padding: 20px;
-  border: 1px solid #000;
+  border: 8px solid #aeb7bd;
   background-color: #fff;
   min-height: 100vh;
 }
