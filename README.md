@@ -28,7 +28,7 @@ If you can't run this site locally, you can [view the site here](https://nhs-acc
 
 ## Thanks
 
-This testing site is inspired by the ['Training people to do accessibility reviews'](https://accessibility.blog.gov.uk/2020/01/14/training-people-to-do-accessibility-reviews/) blog article by Beverley Newing at the Ministry of Justice. This site is based on the ['Record a goose sighting'](https://record-a-goose-sighting.herokuapp.com/) fictional service they created.
+This testing site is inspired by the ['Training people to do accessibility reviews'](https://accessibility.blog.gov.uk/2020/01/14/training-people-to-do-accessibility-reviews/) blog article by Beverley Newing at the Ministry of Justice. This site is based on the ['Record a goose sighting'](https://record-a-goose-sighting.apps.live.cloud-platform.service.justice.gov.uk/) fictional service they created.
 
 ## Contribute
 
