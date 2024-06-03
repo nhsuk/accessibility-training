@@ -12,31 +12,89 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
 
-    <form action="/service/step2" method="post">
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-fieldset__heading">
-            What is your name?
-          </h1>
-        </legend>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label">
-          <!-- <label class="nhsuk-label" for="first-name"> -->
-            First name
-          </label>
-          <input class="nhsuk-input nhsuk-u-width-three-quarters" name="first-name" value="{{ data['first-name'] }}" type="text">
-          <!-- <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text"> -->
-        </div>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="last-name">
-            Last name
-          </label>
-          <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
-        </div>
-      </fieldset>
-      <input value="sessionid" class="nhsuk-u-visually-hidden">
-      <button class="nhsuk-button">Continue</button>
-    </form>
+    {% if error %}
+      {% if noFirstName %}
+        {% if noLastName %}
+          {{ errorSummary({
+            "titleText": "There is a problem",
+            "errorList": [
+              {
+              "text": "Enter your first name",
+              "href": "#"
+              },
+              {
+              "text": "Enter your last name",
+              "href": "#"
+              }
+            ]
+          }) }}
+        {% else %}
+          {{ errorSummary({
+            "titleText": "There is a problem",
+            "errorList": [
+              {
+                "text": "Enter your first name",
+                "href": "#"
+              }
+            ]
+          }) }}
+        {% endif %}
+      {% else %}
+        {% if noLastName %}
+          {{ errorSummary({
+            "titleText": "There is a problem",
+            "errorList": [
+              {
+                "text": "Enter your last name",
+                "href": "#"
+              }
+            ]
+          }) }}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    <form action="/service/step1" method="post">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              What is your name?
+            </h1>
+          </legend>
+          <div class="nhsuk-form-group{% if error %} nhsuk-form-group--error{% endif %}">
+            <label class="nhsuk-label">
+            <!-- <label class="nhsuk-label" for="first-name"> -->
+              First name
+            </label>
+            {% if noFirstName %}
+              <span class="nhsuk-error-message" id="firstname-error">
+                  <span class="nhsuk-u-visually-hidden">Error:</span> Enter your first name
+              </span>
+              <input class="nhsuk-input nhsuk-u-width-three-quarters nhsuk-input--error" id="first-name" name="first-name" type="text" aria-describedby="firstname-error">
+            {% else %}
+              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
+            {% endif %}
+            <!-- <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text"> -->
+          </div>
+          <div class="nhsuk-form-group{% if error %} nhsuk-form-group--error{% endif %}">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            {% if noLastName %}
+              <span class="nhsuk-error-message" id="lastname-error">
+                <span class="nhsuk-u-visually-hidden">Error:</span> Enter your last name
+              </span>
+              <input class="nhsuk-input nhsuk-u-width-three-quarters nhsuk-input--error" id="last-name" name="last-name" type="text" aria-describedby="lastname-error">
+            {% else %}
+              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" type="text" value="{{ data['last-name'] }}">
+            {% endif %}
+          </div>
+        </fieldset>
+        <input value="sessionid" class="nhsuk-u-visually-hidden">
+        <button class="nhsuk-button">Continue</button>
+
+      </form>
 
   </div>
 </div>

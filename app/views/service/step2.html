@@ -43,15 +43,43 @@
 
 {% block bodyEnd %}
 <script src="/js/jquery-3.3.1.min.js"></script>
-<!-- hack to jump to the next input field or to the continue button -->
+<!-- hack to jump to the next input field or to the continue button, after a little delay -->
 <script>
-  $('.nhsuk-input').keyup(function (e) {
-    if (this.value.length == 2) {
-      $(this).parent().next().children('.nhsuk-input').focus();
+
+  function delay(callback, ms) {
+    var timer = 0;
+    return function() {
+      var context = this, args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        callback.apply(context, args);
+      }, ms || 0);
+    };
+  }
+
+  $('.nhsuk-input').keyup(delay(function (e) {
+
+    if ($(this).attr('id') === "dob-day") {
+      let day = Number(this.value);
+      if ((day <= 31) && (day > 0)) {
+        $(this).parent().next().children('.nhsuk-input').focus();
+      }
     }
-    if (this.value.length == 4) {
-      $('.nhsuk-button').focus();
+
+    if ($(this).attr('id') === "dob-month") {
+      let month = Number(this.value);
+      if ((month <= 12) && (month > 0)) {
+        $(this).parent().next().children('.nhsuk-input').focus();
+      }
     }
-  });
+
+    if ($(this).attr('id') === "dob-year") {
+      if (this.value.length == 4) {
+        $('.nhsuk-button').focus();
+      }
+    }
+
+  }, 250));
+
 </script>
 {% endblock %}
