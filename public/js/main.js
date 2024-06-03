@@ -282,7 +282,6 @@ aria.Utils = aria.Utils || {};
     }
   }; // end closeDialog
 })();
-
 'use strict';
 /**
  * @namespace aria
