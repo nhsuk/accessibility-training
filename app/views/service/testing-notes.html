@@ -35,16 +35,20 @@
 {% endblock %}
 
 {% block footer %}
-<footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
-    <div class="nhsuk-width-container">
-      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Home</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/service/testing-notes">Testing notes</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/service/answers">Answers</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/service/testing-notes",
+        "label": "Testing notes"
+      },
+      {
+        "URL": "/service/answers",
+        "label": "Answers"
+      }
+    ]
+  }) }}
 {% endblock %}
