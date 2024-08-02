@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% set serviceDir = "service" %}
 
 {% block pageTitle %}
   Data has been cleared from current session
@@ -20,7 +21,7 @@
       </p>
 
       <p>
-        <a href="/service/start-page">Start again</a>
+        <a href="/{{ serviceDir }}/start-page">Start again</a>
       </p>
 
     </div>

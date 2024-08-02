@@ -64,11 +64,13 @@
     order: 2;
   }
   .nhsuk-checkboxes__item--order3 {
-    @include nhsuk-responsive-margin(2, "bottom");
     order: 3;
   }
   .nhsuk-checkboxes__item--order4 {
     order: 4;
+  }
+  .nhsuk-checkboxes__item--bottom-margin {
+    @include nhsuk-responsive-margin(2, "bottom");
   }
 }
 

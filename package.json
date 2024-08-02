@@ -12,6 +12,7 @@
     "postinstall": "npm run build",
     "start": "node app.js",
     "pa11y-ci": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap http://localhost:3000/service/sitemap.xml",
+    "pa11y-ci-good": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap http://localhost:3000/service-good/sitemap.xml",
     "test": "",
     "prewatch": "gulp build",
     "watch": "gulp",
