@@ -3,31 +3,31 @@
   <url>
     <loc>http://localhost:3000/</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/start-page</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/step1</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/step2</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/step3</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/step4</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/step5</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/confirmation</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/testing-notes</loc>
   </url>
-    <url>
+  <url>
     <loc>http://localhost:3000/service/answers</loc>
   </url>
 </urlset>

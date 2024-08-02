@@ -8,6 +8,10 @@ router.get('/service/sitemap.xml', function(req, res) {
     res.sendFile('sitemap.xml', { root: './app/views/service' });
 });
 
+router.get('/service-good/sitemap.xml', function(req, res) {
+  res.sendFile('sitemap.xml', { root: './app/views/service-good' });
+});
+
 router.post('/service/step1', function(req, res) {
 
     let firstName = req.session.data['first-name']
@@ -28,6 +32,28 @@ router.post('/service/step1', function(req, res) {
     }
 
 });
+
+router.post('/service-good/step1', function(req, res) {
+
+  let firstName = req.session.data['first-name']
+  let lastName = req.session.data['last-name']
+
+  if (firstName == ""){
+    if (lastName == ""){
+      res.render('service-good/step1', {error: 1, noFirstName: 1, noLastName: 1})
+    } else {
+      res.render('service-good/step1', {error: 1, noFirstName: 1})
+    }
+  } else {
+    if (lastName == ""){
+      res.render('service-good/step1', {error: 1, noLastName: 1})
+    } else {
+      res.redirect('/service-good/step2')
+    }
+  }
+
+});
+
 
 
 module.exports = router;
