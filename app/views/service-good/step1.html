@@ -3,7 +3,7 @@
 {% set serviceDir = "service-good" %}
 
 {% block pageTitle %}
-  What is your name? - Register for our new service - NHS
+  {% if error %}Error: {% endif %}What is your name? - Register for our new service - NHS
 {% endblock %}
 
 {% block beforeContent %}
