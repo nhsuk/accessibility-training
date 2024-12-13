@@ -54,6 +54,4 @@ router.post('/service-good/step1', function(req, res) {
 
 });
 
-
-
 module.exports = router;
