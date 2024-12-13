@@ -28,7 +28,7 @@
     "browser-sync": "^3.0.2",
     "client-sessions": "^0.8.0",
     "dotenv": "^6.0.0",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-session": "^1.18.1",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
