@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% set backLinkPage = "step2" %}
-{% set serviceDir = "service" %}
+{% set serviceDir = "service-good" %}
 
 {% block pageTitle %}
   Do you know your NHS number? - Register for our new service - NHS
@@ -9,7 +9,7 @@
 {% block headCSS %}
   <link href="/css/main.css" rel="stylesheet">
   <script src="/js/jquery-3.3.1.min.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/main-good.js"></script>
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,15 +30,15 @@
             Your NHS number is a 10 digit number, like <span class="nhsuk-u-nowrap">485 777 3456</span>.
           </span>
 
-          <p><a href="" onclick="openDialog('dialog', this)">Where can I find my NHS number?</a>
+          <p><a href="" onclick="openDialog('dialog', this); return false;">Where can I find my NHS number?</a>
 
           <div id="dialog_layer" class="dialogs">
             <div role="dialog" id="dialog" aria-labelledby="dialog_label" aria-describedby="dialog_desc" aria-modal="true" class="hidden">
-              <p class="nhsuk-u-margin-bottom-0"><a href="" onclick="closeDialog(this)">Close</a></p>
+              <p class="nhsuk-u-margin-bottom-0"><a href="" onclick="closeDialog(this); return false;">Close</a></p>
               <h2 id="dialog_label" class="dialog_label">Where can I find my NHS number?</h2>
               <p id="dialog_desc">You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service.</p>
               <div class="dialog_form_actions">
-                <button class="nhsuk-button nhsuk-u-margin-bottom-1 dialog-button dialog-button--close" onclick="closeDialog(this)">Close</button>
+                <button class="nhsuk-button nhsuk-u-margin-bottom-1 dialog-button dialog-button--close" onclick="closeDialog(this); return false;">Close</button>
               </div>
             </div>
           </div>
@@ -66,22 +66,9 @@
             </div>
           </div>
         </fieldset>
-        <button class="nhsuk-button" aria-label="Submit">Continue</button>
+        <button class="nhsuk-button">Continue</button>
       </form>
 
     </div>
-  </div>
-
-  <!-- JavaScript hack to do nothing if dialog button or link href="" clicked and to trap keypresses -->
-  <script>
-    $( document ).ready(function() {
-      $('a[href=""], button.dialog-button').click(function(e) {
-        e.preventDefault();
-      });
-      $('button.dialog-button--close').keydown(function(e) {
-        e.preventDefault();
-      });
-    });
-  </script>
-
+  </div>      
 {% endblock %}

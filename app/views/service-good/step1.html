@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
 {% set backLinkPage = "start-page" %}
-{% set serviceDir = "service" %}
+{% set serviceDir = "service-good" %}
 
 {% block pageTitle %}
-  What is your name? - Register for our new service - NHS
+  {% if error %}Error: {% endif %}What is your name? - Register for our new service - NHS
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,11 +21,11 @@
             "errorList": [
               {
               "text": "Enter your first name",
-              "href": "#"
+              "href": "#first-name"
               },
               {
               "text": "Enter your last name",
-              "href": "#"
+              "href": "#last-name"
               }
             ]
           }) }}
@@ -35,7 +35,7 @@
             "errorList": [
               {
                 "text": "Enter your first name",
-                "href": "#"
+                "href": "#first-name"
               }
             ]
           }) }}
@@ -47,7 +47,7 @@
             "errorList": [
               {
                 "text": "Enter your last name",
-                "href": "#"
+                "href": "#last-name"
               }
             ]
           }) }}
@@ -64,8 +64,7 @@
             </h1>
           </legend>
           <div class="nhsuk-form-group{% if error %} nhsuk-form-group--error{% endif %}">
-            <label class="nhsuk-label">
-            <!-- <label class="nhsuk-label" for="first-name"> -->
+            <label class="nhsuk-label" for="first-name">
               First name
             </label>
             {% if noFirstName %}
@@ -76,7 +75,6 @@
             {% else %}
               <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
             {% endif %}
-            <!-- <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text"> -->
           </div>
           <div class="nhsuk-form-group{% if error %} nhsuk-form-group--error{% endif %}">
             <label class="nhsuk-label" for="last-name">
@@ -92,7 +90,6 @@
             {% endif %}
           </div>
         </fieldset>
-        <input value="sessionid" class="nhsuk-u-visually-hidden">
         <button class="nhsuk-button">Continue</button>
 
       </form>
