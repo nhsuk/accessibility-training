@@ -1,6 +1,6 @@
 # Introduction
 
-This exercise is based on a a fictional NHS service website which uses the [NHS design system](https://service-manual.nhs.uk/design-system). The design system is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines.
+This exercise is based on a fictional NHS service website which uses the [NHS design system](https://service-manual.nhs.uk/design-system). The design system is based on the research and experience of many NHS digital teams and adheres to accessibility guidelines.
 
 However accessibility issues can be introduced if the design system is misused, misunderstood or not implemented correctly.
 
@@ -8,9 +8,7 @@ However accessibility issues can be introduced if the design system is misused, 
 
 This site contains several accessibility issues. The idea is to find as many of them as you can.
 
-Read the [testing notes](https://nhs-accessibility-training.onrender.com/service/testing-notes) first to get you started on how you can test for accessibility issues.
-
-There is also an [answers](https://nhs-accessibility-training.onrender.com/service/answers) page indicating all the accessibility issue. Please try to go throught the site first before looking at the answers!</p>
+Read the [testing notes](https://nhs-accessibility-excercise.onrender.com/service/testing-notes) first to get you started on how you can test for accessibility issues.
 
 ## How to run this site locally
 
@@ -24,7 +22,7 @@ To run it locally:
 
 The site should now be running at `http://localhost:3000`
 
-If you can't run this site locally, you can [view the site here](https://nhs-accessibility-training.onrender.com/).
+If you can't run this site locally, you can [view the site here](https://nhs-accessibility-excercise.onrender.com/).
 
 ## Thanks
 
