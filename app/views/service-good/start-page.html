@@ -1,27 +1,8 @@
 {% extends 'layout.html' %}
-{% set serviceDir = "service" %}
+{% set serviceDir = "service-good" %}
 
 {% block pageTitle %}
   Register for our new service - NHS.UK
-{% endblock %}
-
-{% block headCSS %}
-  <link href="/css/main.css" rel="stylesheet">
-  <!-- lock orientation to portrait when rotating small device to landscape -->
-  <style>
-    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-      html {
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        width: 100vh;
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-    }
-  </style>
 {% endblock %}
 
 {% block beforeContent %}
@@ -54,12 +35,12 @@
       <ul>
         <li>tell us your name</li>
         <li>tell us your date of birth</li>
-        <li>tell us if you know your <a class="nhsuk-link--override" href="https://www.nhs.uk/using-the-nhs/about-the-nhs/what-is-an-nhs-number/">NHS number</a></li>
+        <li>tell us if you know your <a href="https://www.nhs.uk/using-the-nhs/about-the-nhs/what-is-an-nhs-number/">NHS number</a></li>
         <li>tell us if you have had certain conditions</li>
         <li>register your details</li>
       </ul>
 
-      <p>Click on the green 'Start now' button below to continue.</p>
+      <p>Click on the 'Start now' button to continue.</p>
 
       <p>
         <a href="http://www.nhs.uk" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-2 nhsuk-u-margin-top-4">Back to NHS.UK</a>
@@ -70,13 +51,13 @@
 
     <aside class="nhsuk-grid-column-one-third">
       <div class="nhsuk-related-nav">
-        <h1 class="nhsuk-heading-m nhsuk-u-margin-top-2">Other NHS services</h1>
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-top-2">Other NHS services</h2>
         <nav class="nhsuk-related-nav__nav-section">
           <ul class="nhsuk-related-nav__list">
             <li><a href="https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/">Urgent and emergency care services</a></li>
             <li><a href="https://www.nhs.uk/nhs-services/sexual-health-services/">Sexual health services</a></li>
             <li><a href="https://www.nhs.uk/service-search/pregnancy">Pregnancy services</a></li>
-            <li><a href="https://www.nhs.uk/nhs-services/mental-health-services/" target="_blank">Mental health services</a></li>
+            <li><a href="https://www.nhs.uk/nhs-services/mental-health-services/" target="_blank">Mental health services (opens in new tab)</a></li>
           </ul>
         </nav>
       </div>

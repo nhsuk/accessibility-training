@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-{% set serviceDir = "service" %}
+{% set serviceDir = "service-good" %}
 
 {% block pageTitle %}
   Check your answers - Register for our new service - NHS
@@ -40,7 +40,7 @@
           {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
         </dd>
         <dd class="nhsuk-summary-list__actions">
-          <a href="/{{ serviceDir }}/step2" class="nhsuk-link--override__focus">
+          <a href="/{{ serviceDir }}/step2">
             Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
           </a>
         </dd>
@@ -55,7 +55,7 @@
         </dd>
         <dd class="nhsuk-summary-list__actions">
           <a href="/{{ serviceDir }}/step3">
-            Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+            Change<span class="nhsuk-u-visually-hidden"> if you know your NHS number</span>
           </a>
         </dd>
       </div>
@@ -83,8 +83,8 @@
 
     </dl>
 
-    <h3 class="nhsuk-heading-m">Now send your details</h3>
-    <p class="text-justified">By sending this information you are confirming that, as far as you know, the details you are providing are correct. You will need to contact your GP if you wish to change any of the information you send to us using this service. Please note that your data will not be shared with any third parties.</p>
+    <h2 class="nhsuk-heading-m">Now send your details</h2>
+    <p>By sending this information you are confirming that, as far as you know, the details you are providing are correct. You will need to contact your GP if you wish to change any of the information you send to us using this service. Please note that your data will not be shared with any third parties.</p>
 
     {{ details({
       "classes": "nhsuk-u-margin-bottom-6",

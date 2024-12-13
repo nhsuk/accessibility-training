@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% set backLinkPage = "step3" %}
-{% set serviceDir = "service" %}
+{% set serviceDir = "service-good" %}
 
 {% block pageTitle %}
   Have you had any of these conditions? - Register for our new service - NHS
@@ -37,16 +37,16 @@
                   Epilepsy
                 </label>
               </div>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order3">
+                <input class="nhsuk-checkboxes__input" id="c-high-blood-pressure" name="condition" type="checkbox" value="High blood pressure"{{ checked("condition", "High blood pressure") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="c-high-blood-pressure">
+                  High blood pressure
+                </label>
+              </div>
               <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order4 nhsuk-checkboxes__item--bottom-margin">
                 <input class="nhsuk-checkboxes__input" id="c-heart-disease" name="condition" type="checkbox" value="Heart disease"{{ checked("condition", "Heart disease") }}>
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="c-heart-disease">
                   Heart disease
-                </label>
-              </div>
-              <div class="nhsuk-checkboxes__item nhsuk-checkboxes__item--order3 nhsuk-checkboxes__item--bottom-margin">
-                <input class="nhsuk-checkboxes__input" id="c-high-blood-pressure" name="condition" type="checkbox" value="High blood pressure"{{ checked("condition", "High blood pressure") }}>
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="c-high-blood-pressure">
-                  High blood pressure
                 </label>
               </div>
               <input name="condition" type="hidden" value=" ">

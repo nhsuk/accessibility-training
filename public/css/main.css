@@ -7643,10 +7643,6 @@ b {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.22);
   }
 }
-.dialog_form_actions {
-  text-align: right;
-}
-
 /* native <dialog> element uses the ::backdrop pseudo-element */
 /* dialog::backdrop, */
 .dialog-backdrop {
@@ -7718,16 +7714,18 @@ b {
   order: 2;
 }
 .nhsuk-checkboxes--override .nhsuk-checkboxes__item--order3 {
-  margin-bottom: 8px;
   order: 3;
-}
-@media (min-width: 40.0625em) {
-  .nhsuk-checkboxes--override .nhsuk-checkboxes__item--order3 {
-    margin-bottom: 8px;
-  }
 }
 .nhsuk-checkboxes--override .nhsuk-checkboxes__item--order4 {
   order: 4;
+}
+.nhsuk-checkboxes--override .nhsuk-checkboxes__item--bottom-margin {
+  margin-bottom: 8px;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-checkboxes--override .nhsuk-checkboxes__item--bottom-margin {
+    margin-bottom: 8px;
+  }
 }
 
 .text-justified {
